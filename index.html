@@ -2,36 +2,62 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Barbearia Ponto do Charme</title>
+  <title>Ponto do Charme</title>
+
+  <!-- Fontes modernas -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-  <h1>Ponto do Charme</h1>
+  <div class="logo">Ponto do Charme</div>
   <nav>
-    <a href="index.html">Home</a>
-    <a href="servicos.html">Serviços</a>
-    <a href="agendamento.html">Agendar</a>
+    <a href="#">Início</a>
+    <a href="#">Serviços</a>
+    <a href="#">Agendar</a>
   </nav>
 </header>
 
-<section class="hero">
-  <h2>Seu estilo começa aqui 💈</h2>
-  <p>Cortes modernos com atendimento exclusivo</p>
-  <a href="agendamento.html" class="btn">Agendar Agora</a>
-</section>
-
-<section class="video">
-  <h2>Veja o que nossos clientes dizem</h2>
-  <video controls width="300">
-    <source src="video.mp4" type="video/mp4">
-  </video>
+<section class="banner">
+  <div class="overlay"></div>
+  <div class="banner-text">
+    <h1>Seu estilo, sua identidade</h1>
+    <p>Barbearia moderna com atendimento exclusivo</p>
+    <a href="#" class="btn">Agende seu horário</a>
+  </div>
 </section>
 
 <section class="sobre">
   <h2>Sobre a Barbearia</h2>
-  <p>Somos uma barbearia de bairro com foco em estilo, qualidade e atendimento personalizado. Trabalhamos com hora marcada para garantir o melhor serviço.</p>
+  <p>Somos uma barbearia de bairro com padrão premium. Trabalhamos com hora marcada para oferecer conforto, estilo e qualidade em cada atendimento.</p>
+</section>
+
+<section class="servicos">
+  <h2>Nossos Serviços</h2>
+
+  <div class="cards">
+    <div class="card">Corte</div>
+    <div class="card">Barba</div>
+    <div class="card">Platinagem</div>
+    <div class="card">Selagem</div>
+    <div class="card">Barbaterapia</div>
+  </div>
+</section>
+
+<section class="depoimentos">
+  <h2>O que dizem nossos clientes</h2>
+  <div class="video-box">
+    <video controls>
+      <source src="video.mp4" type="video/mp4">
+    </video>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Pronto para mudar seu visual?</h2>
+  <a href="#" class="btn">Agendar agora</a>
 </section>
 
 </body>
