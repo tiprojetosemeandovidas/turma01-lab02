@@ -1,134 +1,77 @@
-
 :root {
-    --primary: #d4af37; /* Dourado Premium */
-    --bg-dark: #0f0f0f;
-    --card-bg: #1a1a1a;
+    --primary: #c9a050; /* Dourado Premium */
+    --bg-dark: #0a0a0a;
+    --card-bg: #161616;
     --text-light: #f4f4f4;
-    --accent: #25d366; /* WhatsApp Green */
+    --gray: #888;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
 
-body { background: var(--bg-dark); color: var(--text-light); scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-light); overflow-x: hidden; }
 
-/* Header Minimalista Estilo Social Media */
-nav {
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center;
-    padding: 20px 8%;
-    background: rgba(15, 15, 15, 0.95);
-    position: fixed; width: 100%; top: 0; z-index: 1000;
-    backdrop-filter: blur(10px);
+/* Navbar */
+.navbar {
+    display: flex; justify-content: space-between; padding: 2rem 5%;
+    position: fixed; width: 100%; top: 0; z-index: 1000; background: rgba(10,10,10,0.8); backdrop-filter: blur(10px);
 }
 
-.logo { font-size: 1.8rem; font-weight: 900; letter-spacing: -1px; }
-.logo span { color: var(--primary); }
+.logo { font-size: 1.5rem; font-weight: 800; letter-spacing: 4px; color: var(--primary); }
 
-ul { display: flex; list-style: none; align-items: center; }
-ul li { margin-left: 30px; }
-ul li a { color: #fff; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: 0.3s; }
+.nav-links { display: flex; list-style: none; align-items: center; }
+.nav-links li a { color: white; text-decoration: none; margin: 0 1.5rem; font-size: 0.9rem; text-transform: uppercase; }
 
-/* Hero Section com Overlay */
+/* Hero */
 .hero {
-    height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&q=80');
-    background-size: cover;
-    background-position: center;
-    display: flex; align-items: center; justify-content: center; text-align: center;
-    padding: 0 5%;
+    height: 100vh; display: flex; align-items: center; justify-content: center;
+    text-align: center; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover; background-position: center;
 }
 
-.hero h1 { font-size: 3.5rem; margin-bottom: 20px; line-height: 1.1; }
-.hero h1 span { color: var(--primary); }
+.hero h1 { font-size: 4rem; margin: 1rem 0; line-height: 1.1; }
+.highlight { color: var(--primary); }
 
-/* Correção da Tabela de Preços */
+/* Pricing Table */
+.pricing { padding: 100px 5%; background: #0f0f0f; }
+.pricing h2 { text-align: center; font-size: 2.5rem; margin-bottom: 50px; }
+
 .pricing-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-    padding: 40px 5%;
-    max-width: 1200px;
-    margin: 0 auto;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;
 }
 
-.item-list {
-    margin-top: 25px;
+.price-card {
+    background: var(--card-bg); padding: 2rem; border-radius: 15px;
+    border: 1px solid #333; transition: 0.3s;
 }
 
-.item, .item-combo {
-    display: flex;
-    justify-content: space-between; /* Empurra o preço para o canto direito */
-    align-items: center;
-    padding: 12px 0;
-    border-bottom: 1px border-bottom: 1px solid rgba(255,255,255,0.1);
+.price-card.featured { border-color: var(--primary); transform: scale(1.05); }
+
+.price-card h3 { margin-bottom: 1.5rem; color: var(--primary); }
+
+.price-card ul { list-style: none; }
+.price-card li { 
+    display: flex; justify-content: space-between; 
+    padding: 12px 0; border-bottom: 1px solid #222;
 }
 
-.item span {
-    font-size: 1rem;
-    color: #ccc;
+.old-price { text-decoration: line-through; color: #666; font-size: 0.8rem; }
+.new-price { color: #00ff88; font-weight: bold; }
+
+/* Booking & Video */
+.booking { padding: 100px 5%; }
+.booking-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+
+.video-placeholder {
+    width: 100%; height: 500px; background: #222; border-radius: 20px;
+    display: flex; align-items: center; justify-content: center; border: 2px dashed var(--primary);
 }
 
-.item strong {
-    color: var(--primary);
-    font-size: 1.1rem;
-    white-space: nowrap; /* Impede o preço de quebrar linha */
+.btn-wpp {
+    display: inline-block; background: #25d366; color: white; padding: 1rem 2rem;
+    border-radius: 50px; text-decoration: none; margin-top: 2rem; font-weight: bold;
 }
 
-.item-combo {
-    background: rgba(212, 175, 55, 0.1);
-    padding: 12px 10px;
-    border-radius: 5px;
-    margin-top: 10px;
-    border-bottom: none;
-}
-
-/* Estilo do Botão de Plano Mensal */
-.btn-plan {
-    display: block;
-    text-align: center;
-    background: var(--primary);
-    color: #000;
-    padding: 15px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 800;
-    margin-top: 20px;
-    text-transform: uppercase;
-    transition: 0.3s;
-}
-
-.btn-plan:hover {
-    background: #fff;
-    transform: scale(1.02);
-}
-
-.stats-mini {
-    display: flex;
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.stats-mini div {
-    background: #1a1a1a;
-    padding: 15px;
-    border-left: 3px solid var(--primary);
-    font-size: 0.85rem;
-}
-/* Formulário e Botões */
-.btn-primary {
-    background: var(--primary); color: #000;
-    padding: 15px 35px; border-radius: 8px; font-weight: bold;
-    text-decoration: none; display: inline-block; transition: 0.3s;
-}
-
-.btn-full {
-    width: 100%; background: var(--accent); color: white;
-    border: none; padding: 15px; border-radius: 8px; font-weight: bold; cursor: pointer;
-}
-
-/* Responsividade */
 @media (max-width: 768px) {
+    .booking-grid { grid-template-columns: 1fr; }
     .hero h1 { font-size: 2.5rem; }
-    ul { display: none; } /* Adicionar menu hamburguer se necessário */
 }
