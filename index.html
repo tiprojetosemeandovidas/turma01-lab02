@@ -4,87 +4,198 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barbearia Classic | Luiz Henrique</title>
-    <link rel="stylesheet" href="css/style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="logo">CLASSIC</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#servicos">Serviços</a></li>
-            <li><a href="#agendar" class="btn-nav">Agendar Agora</a></li>
-        </ul>
-    </nav>
+    <div id="loader">
+        <div class="loader-content">CLASSIC</div>
+    </div>
 
-    <section id="home" class="hero">
-        <div class="hero-content" data-aos="fade-up">
-            <span class="subtitle">A Arte da Tesoura por Luiz Henrique</span>
-            <h1>Estilo é um reflexo da sua <span class="highlight">atitude.</span></h1>
-            <p>Inspirada na excelência do mestre Seu Elias, a Barbearia Classic une a tradição da velha guarda com a inovação do lifestyle moderno.</p>
-            <a href="#agendar" class="btn-main">Quero um visual novo</a>
-        </div>
-    </section>
+    <header class="main-header">
+        <nav class="container">
+            <div class="logo">
+                <span class="gold">CLASSIC</span> BARBEARIA
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#historia">A Casa</a></li>
+                <li><a href="#precos">Serviços</a></li>
+                <li><a href="#agendamento">Agendamento</a></li>
+            </ul>
+            <div class="header-cta">
+                <a href="https://wa.me/5531989100228" class="btn-sm">Fale Conosco</a>
+            </div>
+        </nav>
+    </header>
 
-    <section id="servicos" class="pricing">
-        <h2 data-aos="fade-down">Menu de Experiências</h2>
-        <div class="pricing-container">
-            <div class="price-card" data-aos="zoom-in">
-                <h3>Essenciais</h3>
-                <ul>
-                    <li>Corte Individual <span>R$ 50</span></li>
-                    <li>Barba Ritual <span>R$ 40</span></li>
-                    <li>Sobrancelha <span>R$ 20</span></li>
-                    <li>Pintura / Camuflagem <span>R$ 60</span></li>
-                </ul>
-            </div>
-            <div class="price-card featured" data-aos="zoom-in" data-aos-delay="200">
-                <div class="badge">Mais Procurado</div>
-                <h3>Combos Gold</h3>
-                <ul>
-                    <li>Corte + Barba <span>R$ 80</span></li>
-                    <li>Combo Classic (Corte + Sobr. + Barba) <span>R$ 95</span></li>
-                    <li>Platinagem <span class="old-price">R$ 150</span> <span class="new-price">R$ 120</span></li>
-                    <li>Selagem Térmica (Novo!) <span>R$ 80</span></li>
-                </ul>
-            </div>
-            <div class="price-card" data-aos="zoom-in" data-aos-delay="400">
-                <h3>Premium</h3>
-                <ul>
-                    <li>Barbaterapia <span>R$ 70</span></li>
-                    <li><strong>Plano Mensal</strong> (Cortes Ilimitados) <span>R$ 160/mês</span></li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="agendar" class="booking">
-        <div class="booking-grid">
-            <div class="info-contact" data-aos="fade-right">
-                <h2>O Próximo Nível</h2>
-                <p>Atendimento exclusivo com Luiz Henrique. Sem filas, sem pressa.</p>
-                <div class="details">
-                    <p><i class="fas fa-clock"></i> Terça a Sábado: 09h às 20h</p>
-                    <p><i class="fab fa-whatsapp"></i> (31) 98910-0228</p>
-                </div>
-                <a href="https://wa.me/5531989100228" target="_blank" class="btn-wpp">
-                    <i class="fab fa-whatsapp"></i> Chamar no WhatsApp
-                </a>
-            </div>
-            <div class="video-feedback" data-aos="fade-left">
-                <div class="video-placeholder">
-                    <span>VÍDEO DE FEEDBACK DOS CLIENTES</span>
+    <main>
+        <section id="historia" class="hero-section">
+            <div class="overlay"></div>
+            <div class="container hero-wrapper">
+                <div class="hero-text" data-aos="fade-right">
+                    <span class="top-tag">Desde o estilo clássico ao moderno</span>
+                    <h1>O Legado de <br><span class="gold">Luiz Henrique</span></h1>
+                    <p class="hero-p">
+                        Inspirada na maestria da barbearia <strong>Seu Elias</strong>, a Classic não é apenas um corte. É o seu ritual de confiança. Aqui, o detalhe é lei e a sua imagem é o nosso compromisso.
+                    </p>
+                    <div class="hero-btns">
+                        <a href="#agendamento" class="btn-primary">Reservar Horário</a>
+                        <a href="#precos" class="btn-outline">Ver Tabela</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section id="precos" class="pricing-section">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Menu de Serviços</h2>
+                    <p>Alinhamento, precisão e os melhores produtos do mercado.</p>
+                </div>
+
+                <div class="pricing-grid">
+                    <div class="price-category" data-aos="fade-up" data-aos-delay="100">
+                        <div class="item">
+                            <div class="item-info">
+                                <span>Corte</span>
+                                <div class="line"></div>
+                                <span class="price">R$ 50</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item-info">
+                                <span>Barba</span>
+                                <div class="line"></div>
+                                <span class="price">R$ 40</span>
+                            </div>
+                        </div>
+                        <div class="item featured">
+                            <div class="item-info">
+                                <span>Corte + Barba</span>
+                                <div class="line"></div>
+                                <span class="price">R$ 80</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item-info">
+                                <span>Sobrancelha</span>
+                                <div class="line"></div>
+                                <span class="price">R$ 20</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="price-category" data-aos="fade-up" data-aos-delay="200">
+                        <div class="item">
+                            <div class="item-info">
+                                <span>Pintura</span>
+                                <div class="line"></div>
+                                <span class="price">R$ 60</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item-info">
+                                <span>Selagem Térmica (Sugestão)</span>
+                                <div class="line"></div>
+                                <span class="price">R$ 80</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item-info">
+                                <span>Platinagem</span>
+                                <div class="line"></div>
+                                <span class="price gold">R$ 120 <small>(Desc.)</small></span>
+                            </div>
+                        </div>
+                        <div class="item premium">
+                            <div class="item-info">
+                                <span>Barbaterapia</span>
+                                <div class="line"></div>
+                                <span class="price">R$ 70</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="monthly-plan" data-aos="zoom-in">
+                    <div class="plan-card">
+                        <h3>Plano Mensal Classic</h3>
+                        <p>Cortes ilimitados e prioridade na agenda por um valor fixo.</p>
+                        <a href="https://wa.me/5531989100228" class="btn-gold">Assinar Plano</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="agendamento" class="booking-section">
+            <div class="container booking-container">
+                
+                <div class="booking-info" data-aos="fade-right">
+                    <h2>Agende sua Experiência</h2>
+                    <p>Trabalhamos exclusivamente com hora marcada para garantir que você tenha toda a atenção de Luiz Henrique.</p>
+                    
+                    <div class="contact-cards">
+                        <div class="c-card">
+                            <i class="fas fa-clock"></i>
+                            <h4>Funcionamento</h4>
+                            <p>Terça a Sábado: 09h às 20h</p>
+                        </div>
+                        <div class="c-card">
+                            <i class="fab fa-whatsapp"></i>
+                            <h4>WhatsApp</h4>
+                            <p>(31) 98910-0228</p>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/5531989100228" class="btn-wpp-large">
+                        <i class="fab fa-whatsapp"></i> Agendar via WhatsApp
+                    </a>
+                </div>
+
+                <div class="social-feedback" data-aos="fade-left">
+                    <div class="feedback-header">
+                        <i class="fab fa-instagram"></i> <span>Feedback dos Clientes</span>
+                    </div>
+                    <div class="swiper feedbackSlider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="video-mockup">
+                                    <div class="play-icon"><i class="fas fa-play"></i></div>
+                                    <p>Corte impecável! - João Silva</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="video-mockup">
+                                    <div class="play-icon"><i class="fas fa-play"></i></div>
+                                    <p>Atendimento diferenciado. - Lucas M.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2024 Barbearia Classic. Powered by Luiz Henrique.</p>
+        <div class="container footer-content">
+            <p>&copy; 2024 Barbearia Classic. Design by Luiz Henrique.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
 </body>
