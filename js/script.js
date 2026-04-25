@@ -5,24 +5,33 @@ AOS.init({
 });
 
 // Lógica de Agendamento via WhatsApp
-const form = document.getElementById('contactForm');
-
-form.addEventListener('submit', (e) => {
+document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
-    const nome = form.querySelector('input[type="text"]').value;
-    const servico = form.querySelector('select').value;
-    const data = form.querySelector('input[type="date"]').value;
+    // Captura dos campos
+    const nome = this.querySelector('input[type="text"]').value;
+    const servico = this.querySelector('select').value;
+    const data = this.querySelector('input[type="date"]').value;
     
-    const telefoneBarbearia = "5531999999999"; // Substituir pelo real
+    // Seu WhatsApp real
+    const telefone = "5531989100228"; 
     
-    const mensagem = `Olá! Meu nome é ${nome}. Gostaria de agendar o serviço de ${servico} para o dia ${data}. Vi o site e quero confirmar o horário!`;
+    // Formatação da data para o BR
+    const dataFormatada = data.split('-').reverse().join('/');
     
-    const url = `https://api.whatsapp.com/send?phone=${telefoneBarbearia}&text=${encodeURIComponent(mensagem)}`;
+    const texto = `Fala! Vim pelo site. 
+Gostaria de agendar um horário:
+👤 *Nome:* ${nome}
+✂️ *Serviço:* ${servico}
+📅 *Data:* ${dataFormatada}
+    
+Consegue confirmar pra mim?`;
+
+    const encode = encodeURIComponent(texto);
+    const url = `https://wa.me/${telefone}?text=${encode}`;
     
     window.open(url, '_blank');
 });
-
 // Efeito de mudar header ao scroll
 window.addEventListener('scroll', function() {
     const header = document.querySelector('header');
