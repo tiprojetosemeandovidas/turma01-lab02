@@ -3,85 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barbearia Classic | Estilo & Autoridade</title>
+    <title>Barbearia Classic | Luiz Henrique</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <header>
-        <nav>
-            <div class="logo">CLASSIC<span>.</span></div>
-            <ul>
-                <li><a href="#historia">História</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#planos">Plano Mensal</a></li>
-                <li><a href="#agendar" class="btn-nav">Agendar Agora</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav class="navbar">
+        <div class="logo">CLASSIC</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#agendar" class="btn-nav">Agendar Agora</a></li>
+        </ul>
+    </nav>
 
-    <section class="hero">
+    <section id="home" class="hero">
         <div class="hero-content" data-aos="fade-up">
-            <span class="badge">A experiência número #1 da região</span>
-            <h1>Não é apenas um corte, é o seu <span>próximo nível.</span></h1>
-            <p>Especialista em visagismo e cortes modernos. Atendimento exclusivo com hora marcada para quem não aceita o comum.</p>
-            <div class="hero-btns">
-                <a href="#agendar" class="btn-primary">Reservar Horário</a>
-                <a href="#servicos" class="btn-secondary">Ver Preços</a>
+            <span class="subtitle">A Arte da Tesoura por Luiz Henrique</span>
+            <h1>Estilo é um reflexo da sua <span class="highlight">atitude.</span></h1>
+            <p>Inspirada na excelência do mestre Seu Elias, a Barbearia Classic une a tradição da velha guarda com a inovação do lifestyle moderno.</p>
+            <a href="#agendar" class="btn-main">Quero um visual novo</a>
+        </div>
+    </section>
+
+    <section id="servicos" class="pricing">
+        <h2 data-aos="fade-down">Menu de Experiências</h2>
+        <div class="pricing-container">
+            <div class="price-card" data-aos="zoom-in">
+                <h3>Essenciais</h3>
+                <ul>
+                    <li>Corte Individual <span>R$ 50</span></li>
+                    <li>Barba Ritual <span>R$ 40</span></li>
+                    <li>Sobrancelha <span>R$ 20</span></li>
+                    <li>Pintura / Camuflagem <span>R$ 60</span></li>
+                </ul>
+            </div>
+            <div class="price-card featured" data-aos="zoom-in" data-aos-delay="200">
+                <div class="badge">Mais Procurado</div>
+                <h3>Combos Gold</h3>
+                <ul>
+                    <li>Corte + Barba <span>R$ 80</span></li>
+                    <li>Combo Classic (Corte + Sobr. + Barba) <span>R$ 95</span></li>
+                    <li>Platinagem <span class="old-price">R$ 150</span> <span class="new-price">R$ 120</span></li>
+                    <li>Selagem Térmica (Novo!) <span>R$ 80</span></li>
+                </ul>
+            </div>
+            <div class="price-card" data-aos="zoom-in" data-aos-delay="400">
+                <h3>Premium</h3>
+                <ul>
+                    <li>Barbaterapia <span>R$ 70</span></li>
+                    <li><strong>Plano Mensal</strong> (Cortes Ilimitados) <span>R$ 160/mês</span></li>
+                </ul>
             </div>
         </div>
     </section>
 
-  <section id="historia" class="about">
-    <div class="container">
-        <div class="about-grid">
-            <div class="about-text" data-aos="fade-right">
-                <span class="subtitle">Nossa Jornada</span>
-                <h2>Do sonho na garagem à <span>referência na cidade.</span></h2>
-                <p>A Classic não nasceu em um salão luxuoso. Ela nasceu da vontade de um jovem que, com apenas uma tesoura e uma cadeira emprestada, decidiu que o corte de cabelo seria sua ferramenta para mudar de vida.</p>
-                <p>Enfrentamos dias sem clientes e noites de estudo intenso sobre visagismo. Hoje, cada degrau subido reflete o compromisso com a excelência. Não cortamos apenas cabelo; entregamos a confiança que você precisa para conquistar o seu mundo.</p>
-                <div class="stats-mini">
-                    <div><strong>+1000</strong> Autoestimas renovadas</div>
-                    <div><strong>100%</strong> Foco no cliente</div>
+    <section id="agendar" class="booking">
+        <div class="booking-grid">
+            <div class="info-contact" data-aos="fade-right">
+                <h2>O Próximo Nível</h2>
+                <p>Atendimento exclusivo com Luiz Henrique. Sem filas, sem pressa.</p>
+                <div class="details">
+                    <p><i class="fas fa-clock"></i> Terça a Sábado: 09h às 20h</p>
+                    <p><i class="fab fa-whatsapp"></i> (31) 98910-0228</p>
+                </div>
+                <a href="https://wa.me/5531989100228" target="_blank" class="btn-wpp">
+                    <i class="fab fa-whatsapp"></i> Chamar no WhatsApp
+                </a>
+            </div>
+            <div class="video-feedback" data-aos="fade-left">
+                <div class="video-placeholder">
+                    <span>VÍDEO DE FEEDBACK DOS CLIENTES</span>
                 </div>
             </div>
-            <div class="about-img" data-aos="zoom-in">
-                <img src="https://images.unsplash.com/photo-1593702288056-7927b442d0fa?auto=format&fit=crop&q=80" alt="Superação">
-            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="servicos" class="pricing">
-    <h2 class="section-title" data-aos="fade-up">Tabela de Serviços</h2>
-    <div class="pricing-container">
-        <div class="price-card" data-aos="fade-up">
-            <h3>Cortes & Barba</h3>
-            <div class="item-list">
-                <div class="item"><span>Corte Classic</span> <strong>R$ 50</strong></div>
-                <div class="item"><span>Barba Terapia</span> <strong>R$ 40</strong></div>
-                <div class="item"><span>Pintura / Camuflagem</span> <strong>R$ 60</strong></div>
-                <div class="item"><span>Corte + Barba</span> <strong>R$ 80</strong></div>
-                <div class="item"><span>Sobrancelha</span> <strong>R$ 15</strong></div>
-                <div class="item-combo"><span>Combo Premium (C+B+S)</span> <strong>R$ 90</strong></div>
-            </div>
-        </div>
+    <footer>
+        <p>&copy; 2024 Barbearia Classic. Powered by Luiz Henrique.</p>
+    </footer>
 
-        <div class="price-card featured" data-aos="fade-up" data-aos-delay="100">
-            <div class="tag">Destaque</div>
-            <h3>Química & Estilo</h3>
-            <div class="item-list">
-                <div class="item"><span>Platinagem (Promo)</span> <strong>R$ 120</strong></div>
-                <div class="item"><span>Selagem Térmica</span> <strong>R$ 80</strong></div>
-                <div class="item"><span>Reflexo Alinhado</span> <strong>R$ 70</strong></div>
-            </div>
-            <div class="plan-info">
-                <h4>Clube do Corte</h4>
-                <p>Cabelo sempre na régua o mês todo.</p>
-                <a href="https://wa.me/5531989100228?text=Quero+assinar+o+Plano+Mensal" class="btn-plan">Assinar via WhatsApp</a>
-            </div>
-        </div>
-    </div>
-</section>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
